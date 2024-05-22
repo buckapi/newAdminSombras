@@ -71,16 +71,16 @@ export class DataApiService {
 
 	 
 	getAllCategory() {
-		const url_api = this.yeoman.origin.restUrl + '/api/collections/svbCategories/records';
+		const url_api = this.yeoman.origin.restUrl + '/api/collections/sombrasCategories/records';
 		return this.http.get(url_api);
 	  }
 	  getAllBrand(){
-		const url_api = this.yeoman.origin.restUrl + '/api/collections/svbBrands/records';
+		const url_api = this.yeoman.origin.restUrl + '/api/collections/sombrasBrands/records';
 		return this.http.get(url_api);
 	  }
 	  
 	getAllProducts(){
-		const url_api = this.yeoman.origin.restUrl+'/api/collections/svbProducts/records';
+		const url_api = this.yeoman.origin.restUrl+'/api/collections/sombrasProducts/records';
 		return this.http.get(url_api);
 	}
 	getAllTestimonials(){
@@ -92,7 +92,7 @@ export class DataApiService {
 		return this.http.get(url_api);
 	}
 	getClients() {
-		const url_api = this.yeoman.origin.restUrl+'/api/collections/svbProducts/records';
+		const url_api = this.yeoman.origin.restUrl+'/api/collections/sombrasProducts/records';
 		return this.http.get(url_api);
 	}
 	getProduct(id: string){
@@ -139,7 +139,7 @@ export class DataApiService {
 	}
 
 	saveClient(client: ClientInterface) {
-		const url_api = this.yeoman.origin.restUrl + '/api/collections/svbProducts/records';
+		const url_api = this.yeoman.origin.restUrl + '/api/collections/sombrasProducts/records';
 		return this.http.post<ClientInterface>(url_api, client).pipe(
 		  map(data => data)
 		);
@@ -152,13 +152,13 @@ export class DataApiService {
 		);
 	  }
 	  saveBrand( brand: BrandInterface) {
-		const url_api = this.yeoman.origin.restUrl + '/api/collections/svbBrands/records';
+		const url_api = this.yeoman.origin.restUrl + '/api/collections/sombrasBrands/records';
 		return this.http.post<BrandInterface>(url_api, brand).pipe(
 		  map(data => data)
 		);
 	  }
 	  saveCategory( category: CategoryInterface) {
-		const url_api = this.yeoman.origin.restUrl + '/api/collections/svbCategories/records';
+		const url_api = this.yeoman.origin.restUrl + '/api/collections/sombrasCategories/records';
 		return this.http.post<CategoryInterface>(url_api, category).pipe(
 		  map(data => data)
 		);
@@ -210,7 +210,7 @@ export class DataApiService {
 	  }
 	productUpdate(clientData: any, id: string): Observable<any> {
 		// Construir la URL de la solicitud
-		const url = `https://db.buckapi.com:8090/api/collections/svbProducts/records/${id}`;
+		const url = `https://db.buckapi.com:8090/api/collections/sombrasProducts/records/${id}`;
 	
 		// Realizar la solicitud PATCH para actualizar el registro
 		return this.http.patch(url, clientData).pipe(

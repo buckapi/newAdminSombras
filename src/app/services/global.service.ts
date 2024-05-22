@@ -325,7 +325,7 @@ export class GlobalService {
   }
   deleteClient(id: string) {
     // Suponiendo que this.yeoman.origin.restUrl tiene el valor correcto de la URL base
-    const url_api = `${this.yeoman.origin.restUrl}/api/collections/svbProducts/records/${id}`;
+    const url_api = `${this.yeoman.origin.restUrl}/api/collections/sombrasProducts/records/${id}`;
 
     // Si necesitas agregar un token de autorización, descomenta la línea a continuación
     // const token = this.AuthRESTService.getToken();
@@ -562,12 +562,12 @@ export class GlobalService {
   }
   getClientes(): Observable<any> {
     const url_api =
-      this.yeoman.origin.restUrl + "/api/collections/svbProducts/records";
+      this.yeoman.origin.restUrl + "/api/collections/sombrasProducts/records";
     return this.http.get<any>(url_api);
   }
   getColors(): Observable<any> {
     const url_api =
-      this.yeoman.origin.restUrl + "/api/collections/svbColors/records";
+      this.yeoman.origin.restUrl + "/api/collections/sombrasColors/records";
     return this.http.get<any>(url_api);
   }
 

@@ -250,7 +250,7 @@ export class GlobalService {
 
   getConfig(): Observable<any | boolean> {
     return this.http
-      .get<any>(this.apirestUrl + "collections/svbConfig/records")
+      .get<any>(this.apirestUrl + "collections/sombrasConfig/records")
       .pipe(
         map((response) => {
           this.info = response.items[0].info;

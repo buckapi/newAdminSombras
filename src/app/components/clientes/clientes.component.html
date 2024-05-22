@@ -91,10 +91,6 @@
                                             </div>
                                         </div>
                                     </div>
-                                   
-                                         
-                                  
-
                                 </div>
                             </div>
                             <div class="col-md-8">
@@ -127,32 +123,22 @@
                                        
                                     </div>
                                     <div class="col-md-4">
-                                        <div class="row">
-                                            <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label for="event-price">Precio</label>
                                                     <input class="form-control" placeholder="precio" type="number"
                                                         [(ngModel)]="data.price" name="price" required
                                                         [ngModelOptions]="{standalone: true}">
                                                 </div>
-                                            </div>
-                                            <div class="col-md-6">
+                                            
+                                            <!-- <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label for="year">Año</label>
                                                     <input class="form-control" placeholder="año" type="text"
                                                         [(ngModel)]="data.year" name="year" required
                                                         [ngModelOptions]="{standalone: true}">
                                                 </div>
-                                            </div>
+                                            </div> -->
                                         </div>
-                                        
-                                    
-                                        
-                                        
-                                        
-                                    
-                                     
-                                    </div>
                                     <div class="col-md-4">
                                
                                         <div class="form-group">
@@ -167,32 +153,28 @@
                                               [(ngModel)]="data.categories"
                                               [settings]="dropdownSettings">
                                             </ng-multiselect-dropdown>
-                                          </div>
-                                        
-                                        
-                                         
-                                                                               
+                                          </div>                          
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-md-4">
+                                    <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="stockLevel">Nivel de stock</label>
                                             <input type="number" class="form-control" id="stockLevel" [(ngModel)]="data.stockLevel" name="stockLevel">
                                         </div>
                                     </div>
-                                    <div class="col-md-4">
+                                    <!-- <div class="col-md-4">
                                         <div class="form-group">
                                             <label for="stockMin">Stock mínimo</label>
                                             <input type="number" class="form-control" id="stockMin" [(ngModel)]="data.stockMin" name="stockMin">
                                         </div>
-                                    </div>
-                                    <div class="col-md-4">
+                                    </div> -->
+                                    <div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="category">Tipo</label>
+                                            <label for="category">Tallas</label>
                                             <ng-multiselect-dropdown
                                                 [ngModelOptions]="{standalone: true}"
-                                                [placeholder]="'Selecciona el tipo'"
+                                                [placeholder]="'Selecciona la o las tallas'"
                                                 [data]="global.info.types"
                                                 [(ngModel)]="data.type"
                                                 [settings]="dropdownSettings"
@@ -221,7 +203,7 @@
 
                                         </div>
                                     </div>
-                                    <div class="col-md-4">
+                                  <!--   <div class="col-md-4">
                                         <div class="form-group">
                                             <label for="category">Marca
                                             <span *ngIf="showColors" style="color: #FF4C60; width: 20px; height: 20px; font-size: 20px; margin-left: 5px; float: right; margin-bottom: 6px;" class="icon icon-plus iconB" (click)="openAddbrand()"></span>
@@ -235,7 +217,7 @@
                                               >
                                             </ng-multiselect-dropdown>
                                           </div>
-                                    </div>
+                                    </div> -->
                                 </div>
                                 
                             </div>

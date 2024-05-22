@@ -171,7 +171,7 @@ showDeleteButton: boolean = false;
       category: "",
       colors: [] as any[],
       description: "",
-   type: [] as any[],
+      type: [] as any[],
       stockLevel: 0,
       stockMin: 0,
       images: [] as string[],
@@ -265,7 +265,7 @@ showDeleteButton: boolean = false;
     }).then((result) => {
       if (result.value) {
         this.deleteProduct();
-        Swal.fire("Borrada!", "La autoparte ha sido borrada.", "success");
+        Swal.fire("Borrada!", "La producto ha sido borrada.", "success");
       } else if (result.dismiss === Swal.DismissReason.cancel) {
         Swal.fire("Cancelado", "", "error");
       }
@@ -309,7 +309,7 @@ showDeleteButton: boolean = false;
           Swal.fire({
             position: "center",
             icon: "success",
-            title: "Autoparte Actualizada",
+            title: "producto Actualizada",
             showConfirmButton: false,
             timer: 1500,
           });
@@ -374,7 +374,7 @@ showDeleteButton: boolean = false;
       };
 
       this.global.editingProduct = false;
-      Swal.fire("Bien...", "Autoparte agregada satisfactoriamente!", "success");
+      Swal.fire("Bien...", "producto agregada satisfactoriamente!", "success");
       this.global.editingProduct = false;
       this.global.addingProduct = false;
       this.global.loadProducts();

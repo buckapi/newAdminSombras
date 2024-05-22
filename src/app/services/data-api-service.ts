@@ -146,7 +146,7 @@ export class DataApiService {
 	  }
 	  
 	  saveColor(color: ColorInterface) {
-		const url_api = this.yeoman.origin.restUrl + '/api/collections/svbColors/records';
+		const url_api = this.yeoman.origin.restUrl + '/api/collections/sombrasColors/records';
 		return this.http.post<ColorInterface>(url_api, color).pipe(
 		  map(data => data)
 		);
@@ -199,13 +199,13 @@ export class DataApiService {
 		.pipe(map(data => data));
 	}
 	updateColor(colorData: any, id: string): Observable<any> {
-		const url = `https://db.buckapi.com:8090/api/collections/svbConfig/records/${id}`;
+		const url = `https://db.buckapi.com:8090/api/collections/sombrasConfig/records/${id}`;
 		return this.http.patch(url, colorData).pipe(
 		  map(response => response)
 		);
 	  }
 	  updateRecord(recordId: string, data: any): Observable<any> {
-		const url = `${this.baseUrl}/collections/svbConfig/records/${recordId}`;
+		const url = `${this.baseUrl}/collections/sombrasConfig/records/${recordId}`;
 		return this.http.patch<any>(url, data);
 	  }
 	productUpdate(clientData: any, id: string): Observable<any> {
